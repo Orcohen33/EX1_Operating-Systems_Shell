@@ -2,17 +2,13 @@
 CC = gcc
 CFLAGS = -g -Wall
 
-HEADERS=shell.h
-OBJECTS=shell.o
-SOURCES=shell.c
+HEADERS=main.h
+OBJECTS=main.o
+SOURCES=main.c
 
-main: $(TARGET)
+
+main: $(SOURCES)
 	$(CC) $(CFLAGS) $^ -o main 
 
-
-shell: $(SOURCES)
-	$(CC) $(CFLAGS) $(SOURCES) -o shell
-
-
 clean:
-	$(RM) *.o shell server
+	$(RM) *.o main server
